@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { QuoteDetailsComponent } from './components/quote-details/quote-details.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { QuoteDetailsComponent } from './components/quote-details/quote-details.
     QuoteFormComponent,
     QuoteComponent,
     QuoteDetailsComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
