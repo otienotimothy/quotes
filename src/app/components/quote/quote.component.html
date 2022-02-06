@@ -1,10 +1,16 @@
 <div class="card">
-    <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p> {{quoteObj.quote}}. </p>
-      <footer class="blockquote-footer">This quote was added by <cite title="Source Title"> {{quoteObj.addedBy}} </cite></footer>
+  <div class="card-body">
+    <blockquote class="blockquote">
+      <p>{{ quoteObj.quote }}.</p>
+      <footer class="blockquote-footer">
+        This is a quote by
+        <cite title="Source Title"> {{ quoteObj.author }} </cite>
+      </footer>
     </blockquote>
-    </div>
+    <app-quote-details></app-quote-details>
+  </div>
+  <div class="card-footer">
+    Added by <cite title="Source Title"> {{ quoteObj.addedBy }} </cite>
+    <p> {{quoteObj.date}} </p>
+  </div>
 </div>
-
-
