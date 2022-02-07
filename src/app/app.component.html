@@ -7,9 +7,14 @@
         <app-quote-form></app-quote-form>
       </div>
       <div class="col-md-8">
-        <h1 class="text-center mb-3 ">Quotes</h1>
-        <div class="d-flex justify-content-between">
-          <app-quote [ngStyle]="{'width': '32%'}"  *ngFor="let quote of qoutes" [quoteObj]="quote" > </app-quote>
+        <h1 class="text-center mb-3">Quotes</h1>
+        <div class="d-flex justify-content-around">
+          <app-quote
+            [ngStyle]="{ width: '32%' }"
+            *ngFor="let quote of qoutes; let i = index"
+            (deleteQuote)="delete(i)"
+            [quoteObj]="quote"
+          ></app-quote>
         </div>
       </div>
     </div>

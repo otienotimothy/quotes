@@ -9,5 +9,11 @@ import { quotes } from '../mock-data';
 export class AppComponent {
   title = 'quotes-app';
   qoutes = quotes
+
+  constructor() {}
+
+  delete(index:number){
+    this.qoutes.splice(index, 1);
+  }
   
 }

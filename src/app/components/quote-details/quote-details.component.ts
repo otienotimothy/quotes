@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faThumbsUp, faThumbsDown, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,11 +12,15 @@ export class QuoteDetailsComponent implements OnInit {
   faThumbsDown = faThumbsDown;
   faTrash = faTrash
 
+  @Output() delete = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
- 
+  onDelete(){
+    this.delete.emit();
+  }
 
 }

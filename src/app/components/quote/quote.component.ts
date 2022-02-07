@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../../blueprint/quote';
 
 @Component({
@@ -9,6 +9,7 @@ import { Quote } from '../../blueprint/quote';
 export class QuoteComponent implements OnInit {
 
   @Input() quoteObj!: Quote;
+  @Output() deleteQuote = new EventEmitter()
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class QuoteComponent implements OnInit {
   showDetails(){
     console.log('clicked')
     this.quoteObj.showDetails = !this.quoteObj.showDetails
+  }
+
+  onDelete(){
+    this.deleteQuote.emit();
   }
 
 }
