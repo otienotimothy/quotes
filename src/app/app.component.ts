@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { quotes } from '../mock-data'; 
+import { Quote } from './blueprint/quote';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +10,19 @@ import { quotes } from '../mock-data';
 })
 export class AppComponent {
   title = 'quotes-app';
-  qoutes = quotes
+  qoutes:Quote[];
 
-  constructor() {}
+  constructor() {
+    this.qoutes = quotes
+  }
 
   delete(index:number){
     this.qoutes.splice(index, 1);
+  }
+
+  addQuote(quote:Quote ){
+    quote.date = new Date(quote.date);
+    quotes.push(quote);
   }
   
 }

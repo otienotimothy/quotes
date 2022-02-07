@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Quote } from '../../blueprint/quote';
 
 @Component({
@@ -8,11 +9,18 @@ import { Quote } from '../../blueprint/quote';
 })
 export class QuoteFormComponent implements OnInit {
 
-  @Input() quotes!:Quote[]
+  newQuote = new Quote("", "", "", new Date());
+
+  @Output() addQuote = new EventEmitter<Quote>()
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    console.log(this.newQuote);
+    this.addQuote.emit(this.newQuote);
   }
 
 }

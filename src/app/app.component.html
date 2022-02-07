@@ -4,11 +4,11 @@
   <div class="mt-3">
     <div class="row">
       <div class="col-md-4">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addQuote)="addQuote($event)" ></app-quote-form>
       </div>
       <div class="col-md-8">
         <h1 class="text-center mb-3">Quotes</h1>
-        <div class="d-flex justify-content-evenly">
+        <div class="d-flex justify-content-evenly flex-wrap">
           <app-quote
             [ngStyle]="{ width: '32%' }"
             *ngFor="let quote of qoutes; let i = index"

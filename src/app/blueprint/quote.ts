@@ -17,3 +17,12 @@ export class Quote {
     this.downvote = 0;
   }
 }
+
+// export interface Quote {
+//   quote: string,
+//   author: string,
+//   addedBy: string,
+//   date: Date,
+//   showDetails: boolean,
+//   upvote: number
+// }

@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h2 class="text-center">Add Quote</h2>
-  <form  #goalForm="ngForm">
+  <form (ngSubmit)="onSubmit(); quoteForm.reset()" #quoteForm="ngForm">
     <div class="form-group mb-3">
       <label for="quote">Quote</label>
       <input
@@ -8,6 +8,7 @@
         class="form-control"
         id="quote"
         name="quote"
+        [(ngModel)]="newQuote.quote"
         required
       />
     </div>
@@ -18,6 +19,7 @@
         class="form-control"
         id="author"
         name="author"
+        [(ngModel)]="newQuote.author"
         required
       />
     </div>
@@ -28,12 +30,13 @@
         class="form-control"
         id="addedBy"
         name="addedBy"
+        [(ngModel)]="newQuote.addedBy"
         required
       />
     </div>
     <div class="form-group mb-3">
       <label for="date">Date</label>
-      <input class="form-control" type="date" id="date" name="date" required />
+      <input class="form-control" type="date" id="date" name="date"  [(ngModel)]="newQuote.date" required />
     </div>
     <button type="submit" class="btn btn-success">Add Quote</button>
   </form>
