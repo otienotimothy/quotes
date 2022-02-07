@@ -12,6 +12,8 @@ export class QuoteDetailsComponent implements OnInit {
   faThumbsDown = faThumbsDown;
   faTrash = faTrash
 
+  @Output() upClick = new EventEmitter();
+  @Output() downClick = new EventEmitter();
   @Output() delete = new EventEmitter();
   @Input() upvote!:number;
   @Input() downvote!:number;
@@ -23,6 +25,14 @@ export class QuoteDetailsComponent implements OnInit {
 
   onDelete(){
     this.delete.emit();
+  }
+
+  upBtnClick(){
+    this.upClick.emit()
+  }
+
+  downBtnClick(){
+    this.downClick.emit()
   }
 
 }

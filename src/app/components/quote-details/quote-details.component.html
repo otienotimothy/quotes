@@ -1,9 +1,9 @@
 <div class="d-flex justify-content-between">
     <div>
-        <button class="btn btn-success mx-1">
+        <button class="btn btn-success mx-1" (click)="upBtnClick()">
             <fa-icon [icon]="faThumbsUp" ></fa-icon> {{upvote}}
         </button>
-        <button class="btn btn-primary mx-1">
+        <button class="btn btn-primary mx-1" (click)="downBtnClick()">
             <fa-icon [icon]="faThumbsDown" ></fa-icon> {{downvote}}
         </button>
     </div>

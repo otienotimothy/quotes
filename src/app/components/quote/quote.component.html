@@ -13,6 +13,8 @@
       (delete)="onDelete()"
       [upvote]="quoteObj.upvote"
       [downvote]="quoteObj.downvote"
+      (upClick)="upvote()"
+      (downClick)="downvote()"
     ></app-quote-details>
   </div>
   <div class="card-footer">

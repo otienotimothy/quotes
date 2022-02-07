@@ -25,4 +25,12 @@ export class QuoteComponent implements OnInit {
     this.deleteQuote.emit();
   }
 
+  upvote(){
+    this.quoteObj.upvote++
+  }
+
+  downvote(){
+    this.quoteObj.downvote++
+  }
+
 }
