@@ -19,6 +19,6 @@
   </div>
   <div class="card-footer">
     Added by <cite title="Source Title"> {{ quoteObj.addedBy }} </cite>
-    <p>{{ quoteObj.date }}</p>
+    <p class="text-success" >This quote was added <span class="text-danger">{{ quoteObj.date | dateCount }}</span>  days ago</p>
   </div>
 </div>
