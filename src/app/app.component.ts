@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { quotes } from '../mock-data'; 
 import { Quote } from './blueprint/quote';
 
@@ -22,7 +21,8 @@ export class AppComponent {
 
   addQuote(quote:Quote ){
     quote.date = new Date(quote.date);
-    quotes.push(quote);
+    let copyOfQuote = {...quote}
+    quotes.push(copyOfQuote);
   }
   
 }
