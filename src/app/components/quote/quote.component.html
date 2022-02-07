@@ -7,8 +7,8 @@
         <cite title="Source Title"> {{ quoteObj.author }} </cite>
       </footer>
     </blockquote>
-    <app-button btnText="See More"></app-button>
-    <app-quote-details></app-quote-details>
+    <app-button btnText="See More" (btnClick)="showDetails()" ></app-button>
+    <app-quote-details *ngIf="quoteObj.showDetails" ></app-quote-details>
   </div>
   <div class="card-footer">
     Added by <cite title="Source Title"> {{ quoteObj.addedBy }} </cite>

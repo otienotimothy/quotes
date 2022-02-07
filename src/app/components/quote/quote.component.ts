@@ -15,4 +15,9 @@ export class QuoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showDetails(){
+    console.log('clicked')
+    this.quoteObj.showDetails = !this.quoteObj.showDetails
+  }
+
 }
