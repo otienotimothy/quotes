@@ -8,8 +8,8 @@ export const quotes: Quote[] = [
     new Date('2010-12-10')
   ),
   new Quote(
-    'When you reach the end of your rope, tie a knot in it and hang on',
-    'Franklin D. Roosevelt',
+    'Many of life’s failures are people who did not realize how close they were to success when they gave up',
+    'Thomas A. Edison',
     'Lord',
     new Date('2015-10-11')
   ),
