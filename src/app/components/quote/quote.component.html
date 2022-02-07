@@ -7,11 +7,16 @@
         <cite title="Source Title"> {{ quoteObj.author }} </cite>
       </footer>
     </blockquote>
-    <app-button btnText="See More" (btnClick)="showDetails()" ></app-button>
-    <app-quote-details *ngIf="quoteObj.showDetails" (delete)="onDelete()" ></app-quote-details>
+    <app-button btnText="See More" (btnClick)="showDetails()"></app-button>
+    <app-quote-details
+      *ngIf="quoteObj.showDetails"
+      (delete)="onDelete()"
+      [upvote]="quoteObj.upvote"
+      [downvote]="quoteObj.downvote"
+    ></app-quote-details>
   </div>
   <div class="card-footer">
     Added by <cite title="Source Title"> {{ quoteObj.addedBy }} </cite>
-    <p> {{quoteObj.date}} </p>
+    <p>{{ quoteObj.date }}</p>
   </div>
 </div>

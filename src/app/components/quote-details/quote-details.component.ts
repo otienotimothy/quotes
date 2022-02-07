@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faThumbsUp, faThumbsDown, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,6 +13,8 @@ export class QuoteDetailsComponent implements OnInit {
   faTrash = faTrash
 
   @Output() delete = new EventEmitter();
+  @Input() upvote!:number;
+  @Input() downvote!:number;
 
   constructor() { }
 
